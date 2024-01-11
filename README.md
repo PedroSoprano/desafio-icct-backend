@@ -64,8 +64,14 @@ O projeto **desafio-icct-backend** é uma aplicação backend desenvolvida por P
     DATABASE_URL=your_database_url
     JWT_SECRET=your_jwt_secret
 
+4. **Execute os comandos:**
 
-4. **Execute a API com o seguinte comando:**
+    ```bash
+    npx prisma generate
+    npx prisma migrate dev
+
+
+5. **Execute a API com o seguinte comando:**
 
     ```bash
     npm start
