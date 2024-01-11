@@ -4,7 +4,9 @@ import jwt from "jsonwebtoken";
 dotenv.config();
 
 export const authMiddleware = (req, res, next) => {
-    if (req.path === '/login') {
+    const publicRoutes = ['/api/login', '/api-docs/', '/api-docs/swagger-ui.css', '/api-docs/swagger-ui-bundle.js', '/api-docs/swagger-ui-standalone-preset.js', '/api-docs/swagger-ui-init.js', '/api-docs/favicon-32x32.png', '/api-docs/favicon-16x16.png'];
+
+    if (publicRoutes.includes(req.path)) {
         return next();
     }
 
@@ -28,9 +30,9 @@ export const authMiddleware = (req, res, next) => {
 
     jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
         if (err) {
-            return res.status(401).json({
+            return res.status(403).json({
                 status: 'error',
-                statusCode: 401,
+                statusCode: 403,
                 message: 'Token inválido'
             });
         }

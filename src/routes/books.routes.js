@@ -8,9 +8,10 @@ import listAllBooksController from '../controllers/books/listAllBooks.controller
 import deleteBooksController from '../controllers/books/deleteBooks.controller.js'
 import updateBooksController from '../controllers/books/updateBooks.controller.js'
 
-booksRouters.post('/livros', createBookPayloadValidator, createBooksController)
-booksRouters.get('/livros', listAllBooksController)
-booksRouters.delete('/livros/:id', deleteBooksController)
-booksRouters.patch('/livros/:id', updateBooksController)
+
+booksRouters.post('/api/livros', createBookPayloadValidator, createBooksController)
+booksRouters.get('/api/livros', listAllBooksController)
+booksRouters.delete('/api/livros/:id', deleteBooksController)
+booksRouters.patch('/api/livros/:id', updateBooksController)
 
 export default booksRouters

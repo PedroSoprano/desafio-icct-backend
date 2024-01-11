@@ -14,6 +14,8 @@ O projeto **desafio-icct-backend** é uma aplicação backend desenvolvida por P
 - **JWT (JSON Web Tokens):** Mecanismo de autenticação para proteger rotas da API.
 - **Swagger-jsdoc e Swagger-ui-express:** Ferramentas para gerar e visualizar a documentação da API.
 
+## Documentação do projeto
+- Abra o navegador e vá para http://seu_ip ou localhost:a_porta_onde o_backend_está_rodando/api-docs para acessar a documentação Swagger.
 ## Instruções para Configurar e Rodar o Projeto
 
 ### Pré-requisitos
@@ -35,7 +37,7 @@ O projeto **desafio-icct-backend** é uma aplicação backend desenvolvida por P
     PORT=3000
     DATABASE_URL=your_database_url
     JWT_SECRET=your_jwt_secret
-    
+
 3. **Execute a API com o seguinte comando:**
 
    ```bash

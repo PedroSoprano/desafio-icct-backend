@@ -4,6 +4,8 @@ import bookRoutes from './routes/books.routes.js';
 import errorHandlerMiddleware from './middlewares/Error/errorHandling.middleware.js';
 import loginRouter from './routes/login.route.js';
 import { authMiddleware } from './middlewares/auth/auth.middleware.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './swagger.js';
 
 dotenv.config();
 
@@ -19,6 +21,8 @@ app.use(authMiddleware)
 
 app.use(bookRoutes)
 app.use(loginRouter)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

@@ -5,6 +5,6 @@ const loginRouter = Router()
 
 import loginController from '../controllers/login/auth.controller.js'
 
-loginRouter.post('/login', checkLoginPayloadValidator, loginController)
+loginRouter.post('/api/login', checkLoginPayloadValidator, loginController)
 
 export default loginRouter
