@@ -29,7 +29,14 @@ O projeto **desafio-icct-backend** é uma aplicação backend desenvolvida por P
    git clone https://github.com/seu-usuario/desafio-icct-backend.git
    cd desafio-icct-backend
 
-1. **Execute a API com o seguinte comando:**
+2. **Configure as variáveis de ambiente:**
+
+    ```bash
+    PORT=3000
+    DATABASE_URL=your_database_url
+    JWT_SECRET=your_jwt_secret
+    
+3. **Execute a API com o seguinte comando:**
 
    ```bash
    docker compose up -d --build
