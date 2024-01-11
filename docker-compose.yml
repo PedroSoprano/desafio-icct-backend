@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    image: desafio-icct-backend:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: desafio-icct-backend
+    network_mode: bridge
+    ports:
+      - ${PORT}:${PORT}
+    restart: always
+    env_file: .env

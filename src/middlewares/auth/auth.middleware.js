@@ -8,6 +8,14 @@ export const authMiddleware = (req, res, next) => {
         return next();
     }
 
+    if (!req.headers.authorization) {
+        return res.status(401).json({
+            status: 'error',
+            statusCode: 401,
+            message: 'Token não fornecido',
+        });
+    }
+
     const token = req.headers.authorization.split(' ')[1];
 
     if (!token) {
