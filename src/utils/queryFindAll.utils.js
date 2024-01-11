@@ -31,5 +31,16 @@ export const queryHandlingListAllBooks = (query) => {
         };
     }
 
+    if (validFields.length > 0) {
+        const where = validFields.reduce((acc, field) => {
+            acc[field] = filteredQuery[field];
+            return acc;
+        }, {});
+
+        return {
+            where,
+        };
+    }
+
     return
 };

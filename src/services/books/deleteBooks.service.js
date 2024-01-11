@@ -5,7 +5,6 @@ import { isUUID } from '../../utils/isUUID.utils.js';
 const prisma = new PrismaClient();
 
 const deleteBookService = async (bookId) => {
-
     if (!isUUID(bookId)) {
         throw new AppError(400, "Id passado deve ser um UUID.")
     }
