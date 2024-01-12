@@ -22,7 +22,11 @@ export const checkLoginPayloadValidator = [
         const noLoginFields = Object.keys(req.body).filter(campo => !loginFields.includes(campo));
 
         if (noLoginFields.length > 0) {
-            return res.status(400).json({ erro: `Campos não esperados: ${noLoginFields.join(', ')}` });
+            return res.status(400).json({
+                status: 'error',
+                statusCode: 400,
+                message: `Campos não esperados: ${noLoginFields.join(', ')}`
+            });
         }
 
         next();

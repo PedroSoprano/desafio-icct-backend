@@ -16,7 +16,11 @@ export const createBookPayloadValidator = [
         const noBookFields = Object.keys(req.body).filter(campo => !bookFields.includes(campo));
 
         if (noBookFields.length > 0) {
-            return res.status(400).json({ erro: `Campos não esperados: ${noBookFields.join(', ')}` });
+            return res.status(400).json({
+                status: 'error',
+                statusCode: 400,
+                message: `Campos não esperados: ${noBookFields.join(', ')}`
+            });
         }
 
         next();
