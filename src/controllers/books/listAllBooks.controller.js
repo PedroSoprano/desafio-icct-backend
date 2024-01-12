@@ -5,7 +5,7 @@ const listAllBooksController = async (req, res) => {
     try {
         const newBook = await listAllBooksService(req.query)
 
-        return res.status(201).json(newBook)
+        return res.status(200).json(newBook)
     } catch (error) {
         if (error instanceof AppError) {
             handleError(error, res)
