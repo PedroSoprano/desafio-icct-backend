@@ -23,7 +23,7 @@ Obs: Na rota de login qualquer email e senha irá gerar um token
 
 ### Pré-requisitos
 
-- Certifique-se de ter o Node.js instalado. Recomenda-se a versão 17 ou superior.
+- Certifique-se de ter o Node.js instalado. Recomenda-se a versão 18 ou superior.
 - Tenha o Docker e o Docker Compose instalados na máquina.
 
 ### Passos para executar com o Docker compose
