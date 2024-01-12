@@ -31,7 +31,7 @@ Obs: Na rota de login qualquer email e senha irá gerar um token
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/desafio-icct-backend.git
+   git clone git@github.com:PedroSoprano/desafio-icct-backend.git
    cd desafio-icct-backend
 
 2. **Configure as variáveis de ambiente:**
@@ -52,7 +52,7 @@ Obs: Na rota de login qualquer email e senha irá gerar um token
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/desafio-icct-backend.git
+   git clone git@github.com:PedroSoprano/desafio-icct-backend.git
    cd desafio-icct-backend
 
 2. **Instale as dependências:**
