@@ -16,7 +16,10 @@ O projeto **desafio-icct-backend** é uma aplicação backend desenvolvida por P
 
 ## Documentação do projeto no Swagger
 - Abra o navegador e vá para http://seu_ip ou localhost:a_porta_onde o_backend_está_rodando/api-docs para acessar a documentação Swagger.
+
 ## Instruções para Configurar e Rodar o Projeto
+
+Obs: Na rota de login qualquer email e senha irá gerar um token
 
 ### Pré-requisitos
 
